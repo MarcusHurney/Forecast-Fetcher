@@ -23967,7 +23967,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var API_KEY = '4da55b76fff8900a19483e261af4a928';
-	var ROOT_URL = 'http://api.openweathermap.org/data/2.5/forecast?appid=' + API_KEY;
+	var ROOT_URL = '//api.openweathermap.org/data/2.5/forecast?appid=' + API_KEY;
 
 	function fetchWeather(city) {
 
