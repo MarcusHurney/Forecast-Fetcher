@@ -1,9 +1,8 @@
-// index.js will serve as the root reducer for our redux app
-// combineReducers allows you to create multiple reducers and pass
-// them to the app's store
 import { combineReducers } from 'redux';
-import languages from './Language_Reducer';
+import WeatherReducer from './WeatherReducer';
 
-export default combineReducers({
-  languages: languages
+const rootReducer = combineReducers({
+  weather: WeatherReducer
 });
+
+export default rootReducer;

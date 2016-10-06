@@ -1,1 +1,1 @@
-export const DELETE_LANGUAGE = 'DELETE_LANGUAGE';
+export const FETCH_WEATHER = 'FETCH_WEATHER';

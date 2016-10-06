@@ -1,8 +1,18 @@
-import express from 'express';
+var express = require('express');
+var bodyParser = require('body-parser');
 
-let app = express();
+var app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
 
-app.listen(3000);
-console.log('Node server started on port 3000');
+app.use(bodyParser.json());
+
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', function (req, res) {
+  res.send(__dirname + '/public/index.html');
+});
+
+app.listen(PORT, function () {
+	console.log('Express listening on port ' + PORT + '!');
+});

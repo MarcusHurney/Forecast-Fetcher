@@ -1,22 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import SearchBar from './containers/SearchBar';
+import WeatherList from './containers/WeatherList';
 
-// import redux methods
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+const App = () => {
+  return (
+    <div>
+      <SearchBar />
+      <WeatherList />
+    </div>
+  );
+};
 
-// import root reducer, since the file is named index.js, we dont' need
-// to specify its name in the import statement
-import reducers from './reducers';
-
-//import components
-import Greet from './components/Greet';
-
-const App = () => (
-  <Provider store={createStore(reducers)}>
-    <Greet />
-  </Provider>
-);
-
-
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;
